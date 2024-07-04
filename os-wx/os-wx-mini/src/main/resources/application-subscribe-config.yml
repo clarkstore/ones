@@ -1,0 +1,26 @@
+subscribe:
+  config:
+    name: subscribe-config
+os:
+  wxmini:
+    #订阅消息模板
+    subscribe:
+      #跳转小程序类型：developer为开发版；trial为体验版；formal为正式版；默认为正式版
+      miniprogramState: developer
+      configs:
+        #subscribeCode订阅编号为业务调用自定义常量
+        #订阅消息-签到
+        - msgId: signIn
+          tplId: c5KDiyYYvsASR53X0QLQu7EV8WOqroikUf_Ufl7grww
+          page: pages/user/index/index
+          nameList:
+            - name1
+            - date4
+        #订阅消息-积分变更
+        - msgId: point
+          tplId: qofaRm55iiAu-amesLB6a1waYIgue74HT5PAgew6dTY
+          page: pages/user/index/index
+          nameList:
+            - character_string1
+            - date2
+            - thing3

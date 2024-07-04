@@ -1,0 +1,10 @@
+os:
+  oss:
+    # AccessKey ID
+    accessKeyId: xxxx
+    # AccessKey Secret
+    accessKeySecret: xxxx
+    # endpoint
+    endpoint: xxxx
+    # bucketName
+    bucketName: xxxx

@@ -1,0 +1,31 @@
+# apiboot安全配置
+api:
+  boot:
+    security:
+      # 配置资源保护路径
+      auth-prefix:
+        - /api/**
+      # 配置排除路径列表
+      ignoring-urls:
+        - /login
+        - /register
+        - /code/send
+      # 配置内存安全用户列表
+#      users:
+#        - username: admin
+#          password: 123456
+    oauth:
+      away: memory #默认方式
+#      away: redis #配置使用Redis存储OAuth2相关数据
+      # 启用jwt
+      jwt:
+#        enable: true
+        # 转换Jwt时所需加密key
+        sign-key: onestop
+      # 配置客户端列表
+      clients:
+        - clientId: client
+          clientSecret: secret
+          # grantTypes: password为用户密码登录方式
+          grantTypes: refresh_token,vcode
+          accessTokenValiditySeconds: 7200

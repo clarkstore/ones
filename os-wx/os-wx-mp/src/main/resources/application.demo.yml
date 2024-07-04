@@ -1,0 +1,34 @@
+server:
+  port: 80
+
+logging:
+  level:
+    org.springframework: INFO
+    me.chanjar.weixin: INFO
+# 在wxmp-starter中配置
+#spring:
+#  profiles:
+#    #引入菜单配置
+#    include:
+#      - menu-config
+#      - reply-config
+
+#服务号配置
+os:
+  wxmp:
+    appid: #微信appid
+    secret: #微信Secret
+    token: onestop #默认值
+    aesKey: SRXP07cF633daFYh7jasMRDHYMKjANeEQe8kwrfWB5p #默认值
+    #后台api路径配置 在wxmp-starter中配置
+#    apiPath: ${os.wxmp.basePath}/api
+    txtPath: /home/txt/ #验证txt文件路径
+    # 开启菜单配置
+    menu:
+      enabled: true
+    # 开启关键字回复配置
+    reply:
+      enabled: true
+    # 开启订阅消息配置
+    subscribe:
+      enabled: true

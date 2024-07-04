@@ -1,0 +1,42 @@
+server:
+  port: 8001
+
+logging:
+  level:
+    org.springframework: INFO
+    com.onestop.wx: DEBUG
+    com.ijpay.wxpay: DEBUG
+
+spring:
+  profiles:
+    active: dev
+  # 配置时区
+  jackson:
+    time-zone: GMT+8
+
+#服务号配置
+wx:
+  #应用域名，回调中会使用此参数
+  serverHost: http://365.nat100.top
+  #支付异步通知-Api类
+  apiPath: /wxPay/api
+  #支付
+  pay:
+    #支付结果通知-异步回调
+    payNotifyPath: /order
+    #退款结果通知-异步回调
+    refundNotifyPath: /refund
+#   #设置微信公众号appId : 云成长
+    appId: wx930d31e7062a95ea
+#    #设置微信小程序appId : 云科技之家
+#    appId: wx5b0b49f45376b2c9
+    #微信支付商户号
+    mchId: 1518451241
+    #商户平台「API安全」中的 API 密钥
+    partnerKey: 1eac705cf3da3b7605dd8c375d2b8513
+    #apiclient_cert.p12文件的绝对路径
+    certPath: D:/weixinPay/apiclient_cert.p12
+    #应用域名-地址前缀，回调中会使用此参数
+    domain: ${wx.serverHost}${wx.apiPath}/notify
+    #微信支付终端IP
+    spbillCreateIp: 59.44.116.203

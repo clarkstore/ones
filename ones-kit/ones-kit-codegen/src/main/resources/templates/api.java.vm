@@ -1,0 +1,119 @@
+/*
+ * Copyright (c) 2021 OneStop Authors. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package ${package.Controller};
+
+import com.baomidou.mybatisplus.core.toolkit.Wrappers;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+#if(${restControllerStyle})
+#else
+import org.springframework.stereotype.Controller;
+#end
+import util.com.ones.common.core.Res;
+#if(${superControllerClassPackage})
+import ${superControllerClassPackage};
+#end
+import ${package.Entity}.${entity};
+import ${package.Service}.${table.serviceName};
+
+/**
+ * <p>
+ * $!{table.comment} 前端控制器
+ * </p>
+ *
+ * @author ${author}
+ * @version ${date}
+ */
+#if(${restControllerStyle})
+@RestController
+#else
+@Controller
+#end
+@RequestMapping("${os.service.apiPath}#if(${package.ModuleName})/${package.ModuleName}#end/#if(${controllerMappingHyphenStyle})${controllerMappingHyphen}#else${table.entityPath}#end")
+#if(${superControllerClass})
+public class ${entity}Api extends ${superControllerClass} {
+#else
+public class ${entity}Api {
+#end
+
+    @Autowired
+    private $!{table.serviceName} $!{table.entityPath}Service;
+
+    /**
+     * 通过ID查询
+     *
+     * @param id ID
+     * @return $!{entity}
+     */
+    @GetMapping("/{id}")
+    public Res get(@PathVariable String id) {
+        return Res.ok(this.$!{table.entityPath}Service.getById(id));
+    }
+
+    /**
+    * 分页查询信息
+    *
+    * @param page 分页对象
+    * @param $!{table.entityPath} 实体
+    * @return 分页对象
+    */
+    @GetMapping("/page")
+    public Res page(Page page, $!{entity} $!{table.entityPath}) {
+        return Res.ok(this.$!{table.entityPath}Service.page(page, Wrappers.query($!{table.entityPath})));
+    }
+
+    /**
+     * 增加
+     * @param  $!{table.entityPath} 实体
+     * @return Res
+     */
+    @PostMapping("/add")
+    public Res add(@RequestBody $!{entity} $!{table.entityPath}) {
+        if (this.$!{table.entityPath}Service.save($!{table.entityPath})) {
+            return Res.ok();
+        }
+        return Res.failed();
+    }
+
+    /**
+     * 更新
+     * @param  $!{table.entityPath} 实体
+     * @return Res
+     */
+    @PostMapping("/update")
+    public Res update(@RequestBody $!{entity} $!{table.entityPath}) {
+        if (this.$!{table.entityPath}Service.updateById($!{table.entityPath})) {
+            return Res.ok();
+        }
+        // 并发操作，失败
+        return Res.failed();
+    }
+
+    /**
+     * 删除
+     * @param id ID
+     * @return Res
+     */
+    @DeleteMapping("/{id}")
+    public Res delete(@PathVariable String id) {
+        if (this.$!{table.entityPath}Service.removeById(id)) {
+            return Res.ok();
+        }
+        return Res.failed();
+    }
+}

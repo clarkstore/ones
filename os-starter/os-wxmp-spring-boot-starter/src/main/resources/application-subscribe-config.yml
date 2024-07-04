@@ -1,0 +1,18 @@
+subscribe:
+  config:
+    name: subscribe-config
+os:
+  wxmp:
+    #订阅消息模板
+    subscribe:
+      configs:
+        #subscribeCode订阅编号为业务调用自定义常量
+        #订阅消息-充值成功
+        - msgId: payNotify
+          tplId: U9r0tdAE7h5QSuRJVE5pmPDjNfcXbOw4tBUnAY49Ue0
+          page: #可以为空
+          nameList:
+            - character_string8
+            - amount3
+            - time4
+            - thing9

@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html lang="zh" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>服务异常</title>
+    <style type="text/css">
+        body{font-family:"Times New Roman",Georgia,Serif}
+    </style>
+</head>
+<body>
+    <p>用户您好:</p>
+    <p>本邮件为异常测试邮件，可以忽略不必在意：</p>
+    <p th:text="${content}"></p>
+    <p>祝顺利！</p>
+    <br>
+    <div th:include="footer :: pagination"></div>
+</body>
+</html>

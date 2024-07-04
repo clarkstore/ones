@@ -1,0 +1,33 @@
+server:
+  port: 80
+
+logging:
+  level:
+    org.springframework: info
+    cn.binarywang.wx.miniapp: debug
+# 在wxmini-starter中配置
+#spring:
+#  profiles:
+#    #引入菜单配置
+#    include:
+#      - subscribe-config
+os:
+  wxmini:
+    #小程序
+    appid: #微信小程序的appid
+    secret: #微信小程序的Secret
+    token: onestop #默认值
+    aesKey: SRXP07cF633daFYh7jasMRDHYMKjANeEQe8kwrfWB5p #默认值
+    msgDataFormat: JSON #默认JSON
+    #后台配置 在wxmp-starter中配置
+    #    basePath: /wxmini
+    #后台api路径配置 wxmini-starter中配置
+    #    apiPath: ${os.wxmini.basePath}/api
+    #上传路径
+    uploadPath: e:/upload/ #/home/csl/wxMini/upload/
+    #素材原路径
+    mediaPath: e:/upload/
+    #订阅消息模板
+    subscribe:
+      # 开启订阅消息配置
+      enabled: true

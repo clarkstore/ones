@@ -1,0 +1,13 @@
+reply:
+  config:
+    name: reply-config
+os:
+  wxmp:
+    reply:
+      configs:
+        - #关键字
+          keyword: test
+          #消息类型：文本、图片、图文、视频（目前仅支持文本，可缺省配置）
+          msgType: text
+          #文本回复内容
+          replyText: test文本回复

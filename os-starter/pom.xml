@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>ones</artifactId>
+        <groupId>com.github.clarkstore</groupId>
+        <version>0.17.16</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>os-starter</artifactId>
+    <description>starter集合</description>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>os-http-spring-boot-starter</module>
+        <module>os-log-spring-boot-starter</module>
+<!--        <module>os-mqtt-client-spring-boot-starter</module>-->
+<!--        <module>os-mqtt-server-spring-boot-starter</module>-->
+        <module>os-mybatis-spring-boot-starter</module>
+<!--        <module>os-nlp-spring-boot-starter</module>-->
+<!--        <module>os-oss-spring-boot-starter</module>-->
+        <module>os-redis-spring-boot-starter</module>
+<!--        <module>os-rocketmq-spring-boot-starter</module>-->
+<!--        <module>os-sms-spring-boot-starter</module>-->
+        <module>os-task-spring-boot-starter</module>
+<!--        <module>os-toolkit-spring-boot-starter</module>-->
+        <module>os-web-spring-boot-starter</module>
+<!--        <module>os-wxmini-spring-boot-starter</module>-->
+<!--        <module>os-wxmp-spring-boot-starter</module>-->
+    </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
+</project>

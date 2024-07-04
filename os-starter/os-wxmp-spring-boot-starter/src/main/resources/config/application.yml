@@ -1,0 +1,14 @@
+# spring配置文件加载顺序，如果需要重写要在子项目config的同级yml中配置
+spring:
+  profiles:
+    include:
+      #菜单配置
+      - menu-config
+      #关键字回复配置
+      - reply-config
+      #订阅消息配置
+      - subscribe-config
+os:
+  wxmp:
+    #后台api路径配置
+    apiPath: ${os.service.apiPath:/wxmp/api}

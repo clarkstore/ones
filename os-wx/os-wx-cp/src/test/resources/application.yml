@@ -1,0 +1,33 @@
+server:
+  port: 80
+
+logging:
+  level:
+    org.springframework.web: INFO
+    me.chanjar.weixin: DEBUG
+    com.onestop.wx: DEBUG
+
+spring:
+  profiles:
+    active: dev
+  # 配置时区
+  jackson:
+    time-zone: GMT+8
+
+#业务配置==========
+#企业微信配置
+wx:
+  #服务器域名
+  serverHost: http://ticket.ithelpdesk.cn
+  #后台配置
+  serverPath: /wxCp
+  #后台api路径配置
+  apiPath: ${wx.serverPath}/api
+  #前端路径配置
+  uiPath: ${wx.serverHost}/wxui
+  cp:
+    corpId: wxbab192280c45f3b2
+    agentId: 1000005
+    secret: IjfXB8Z6RewnThR1WkO4dxJO9dldu5ci4twOZuue93E
+    token: cloud
+    aesKey: B97WzNdakPmdsbEbFQiYMLE3GLy9grzFShOcXXQIYDw

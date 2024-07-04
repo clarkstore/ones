@@ -1,0 +1,6 @@
+os:
+  nlp:
+    # AccessKey ID
+    accessKeyId: xxxx
+    # AccessKey Secret
+    accessKeySecret: xxxx

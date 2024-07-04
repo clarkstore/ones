@@ -1,0 +1,11 @@
+os:
+  aes:
+    # 开启aes工具类
+    enabled: false
+    # 私钥 16位
+    secret: 0123456789ABCDEF
+  token:
+    # 开启token工具类
+    enabled: false
+    # 私钥 16位
+    secret: 0123456789ABCDEF

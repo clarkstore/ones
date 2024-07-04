@@ -1,0 +1,13 @@
+# spring配置文件加载顺序，如果需要重写要在子项目config的同级yml中配置
+spring:
+  profiles:
+    #引入订阅消息配置
+    include:
+      - subscribe-config
+
+os:
+  wxmini:
+    #后台配置
+    basePath: /wxmini
+    #后台api路径配置
+    apiPath: ${os.wxmini.basePath}/api

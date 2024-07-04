@@ -1,0 +1,3 @@
+os:
+  log:
+    aspect: com.onestop.common.log.aspect.OsBizLogAspect

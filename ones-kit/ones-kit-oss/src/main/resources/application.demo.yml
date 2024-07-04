@@ -1,0 +1,8 @@
+aizuda:
+  oss:
+    minio:
+      platform: minio
+      endpoint:
+      accessKey: Fm4JrJEBgyVnoGUS9MEv
+      secretKey: 8pWdxluN4KZ3jX8XTBghxb4SfvnE9Luqmange4hj
+      bucketName:

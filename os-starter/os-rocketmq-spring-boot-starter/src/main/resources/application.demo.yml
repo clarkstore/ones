@@ -1,0 +1,13 @@
+os:
+  rocketmq:
+    accessKey: XXX
+    secretKey: XXX
+    nameSrvAddr: XXX
+    # 普通消息
+    topic: XXX
+    groupId: XXX
+    tag: *
+    # 顺序消息
+    orderTopic: XXX
+    orderGroupId: XXX
+    orderTag: *
