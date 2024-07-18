@@ -4,6 +4,7 @@ import com.ones.kit.redis.util.OsRedisUtils;
 import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.DependsOn;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.RedisSerializer;
@@ -17,6 +18,11 @@ import org.springframework.data.redis.serializer.RedisSerializer;
 @AutoConfiguration
 public class OsRedisAutoConfiguration {
 
+    /**
+     * redisTemplate
+     * @param factory RedisConnectionFactory
+     * @return RedisTemplate
+     */
     @Bean
     @ConditionalOnMissingBean
     public RedisTemplate<String, Object> redisTemplate(RedisConnectionFactory factory) {
@@ -50,8 +56,12 @@ public class OsRedisAutoConfiguration {
         return template;
     }
 
+    /**
+     * 构建
+     * @return OsRedisUtils
+     */
     @Bean
-//    @DependsOn("redisTemplate")
+    @DependsOn("redisTemplate")
     @ConditionalOnMissingBean
     public OsRedisUtils osRedisUtils() {
         OsRedisUtils utils = new OsRedisUtils();

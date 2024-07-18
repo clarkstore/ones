@@ -151,8 +151,8 @@ public class OsRedisUtils {
 
     /**
      * 取特定前缀下key集合
-     * @param prefix
-     * @return
+     * @param prefix 前缀
+     * @return Set
      */
     public Set<String> getKeys(String prefix) {
         Set<String> keys = this.redisTemplate.keys(prefix + "*");
@@ -308,7 +308,6 @@ public class OsRedisUtils {
      *
      * @param key 键
      * @param map 对应多个键值
-     * @return true 成功 false 失败
      */
     public void hmset(String key, Map<String, Object> map) {
         this.redisTemplate.opsForHash().putAll(key, map);
@@ -320,7 +319,6 @@ public class OsRedisUtils {
      * @param key  键
      * @param map  对应多个键值
      * @param time 时间(秒)
-     * @return true成功 false失败
      */
     public void hmset(String key, Map<String, Object> map, long time) {
         this.redisTemplate.opsForHash().putAll(key, map);
@@ -567,7 +565,6 @@ public class OsRedisUtils {
      * @param key   键
      * @param index 索引
      * @param value 值
-     * @return boolean
      */
     public void lUpdateIndex(String key, long index, Object value) {
         this.redisTemplate.opsForList().set(key, index, value);
