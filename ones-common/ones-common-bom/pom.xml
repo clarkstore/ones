@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
+        <groupId>io.gitee.clarkstore</groupId>
         <artifactId>ones-common</artifactId>
-        <groupId>com.github.clarkstore</groupId>
-        <version>${revision}</version>
+        <version>0.0.2</version>
     </parent>
     <artifactId>ones-common-bom</artifactId>
     <packaging>pom</packaging>
@@ -46,7 +46,7 @@
             <!--os-common-->
             <dependency>
                 <groupId>${project.parent.groupId}</groupId>
-                <artifactId>os-common-core</artifactId>
+                <artifactId>ones-common-core</artifactId>
                 <version>${project.parent.version}</version>
             </dependency>
 <!--            <dependency>-->
@@ -79,39 +79,39 @@
 <!--                <artifactId>os-common-task</artifactId>-->
 <!--                <version>${project.parent.version}</version>-->
 <!--            </dependency>-->
-            <dependency>
-                <groupId>${project.parent.groupId}</groupId>
-                <artifactId>ones-common-web</artifactId>
-                <version>${project.parent.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>${project.parent.groupId}</groupId>-->
+<!--                <artifactId>ones-common-web</artifactId>-->
+<!--                <version>${project.parent.version}</version>-->
+<!--            </dependency>-->
             <!--os-kit-oss-->
-            <dependency>
-                <groupId>${project.parent.groupId}</groupId>
-                <artifactId>ones-kit-oss</artifactId>
-                <version>${project.parent.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>${project.parent.groupId}</groupId>-->
+<!--                <artifactId>ones-kit-oss</artifactId>-->
+<!--                <version>${project.parent.version}</version>-->
+<!--            </dependency>-->
             <!--os-redis-->
-            <dependency>
-                <groupId>${project.groupId}</groupId>
-                <artifactId>ones-kit-redis</artifactId>
-                <version>${project.parent.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>${project.groupId}</groupId>-->
+<!--                <artifactId>ones-kit-redis</artifactId>-->
+<!--                <version>${project.parent.version}</version>-->
+<!--            </dependency>-->
             <!--os-mqtt-->
-            <dependency>
-                <groupId>${project.parent.groupId}</groupId>
-                <artifactId>ones-mqtt-common</artifactId>
-                <version>${project.parent.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>${project.parent.groupId}</groupId>
-                <artifactId>ones-mqtt-client</artifactId>
-                <version>${project.parent.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>${project.parent.groupId}</groupId>
-                <artifactId>ones-mqtt-server</artifactId>
-                <version>${project.parent.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>${project.parent.groupId}</groupId>-->
+<!--                <artifactId>ones-mqtt-common</artifactId>-->
+<!--                <version>${project.parent.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>${project.parent.groupId}</groupId>-->
+<!--                <artifactId>ones-mqtt-client</artifactId>-->
+<!--                <version>${project.parent.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>${project.parent.groupId}</groupId>-->
+<!--                <artifactId>ones-mqtt-server</artifactId>-->
+<!--                <version>${project.parent.version}</version>-->
+<!--            </dependency>-->
             <!--os-wx-->
 <!--            <dependency>-->
 <!--                <groupId>${project.parent.groupId}</groupId>-->

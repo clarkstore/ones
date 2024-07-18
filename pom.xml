@@ -4,36 +4,38 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.clarkstore</groupId>
+    <groupId>io.gitee.clarkstore</groupId>
     <artifactId>ones</artifactId>
-    <version>${revision}</version>
+    <version>0.0.2</version>
     <packaging>pom</packaging>
 
-    <name>ones</name>
+    <name>${project.artifactId}</name>
     <description>ones集合</description>
     <url>https://gitee.com/clarkstore/ones</url>
 
+    <issueManagement>
+        <system>gitee</system>
+        <url>https://gitee.com/clarkstore/ones/issues</url>
+    </issueManagement>
+    <licenses>
+        <license>
+            <name>The Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
     <developers>
         <developer>
             <name>ClarkChang</name>
             <email>changhongyuan@126.com</email>
         </developer>
     </developers>
-    <licenses>
-        <license>
-            <name>Apache License</name>
-            <url>https://www.apache.org/licenses/LICENSE-2.0</url>
-        </license>
-    </licenses>
     <scm>
-        <connection>scm:git:git@github.com:clarkstore/ones.git</connection>
-        <developerConnection>scm:git:git@github.com:clarkstore/ones.git</developerConnection>
-        <url>https://github.com/clarkstore/ones.git</url>
+        <connection>scm:git:git://gitee.com/clarkstore/ones.git</connection>
+        <developerConnection>scm:git:ssh://git@gitee.com:clarkstore/ones.git</developerConnection>
+        <url>https://gitee.com/clarkstore/ones</url>
     </scm>
 
     <properties>
-        <!--版本号-->
-        <revision>0.1.0</revision>
         <java.version>17</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!--版本号-->
@@ -63,13 +65,12 @@
         <!--微信模块-->
         <wx-java.version>4.5.0</wx-java.version>
         <!--部署-->
-        <versions-maven-plugin.version>2.11.0</versions-maven-plugin.version>
-        <maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
+        <versions-maven-plugin.version>2.17.1</versions-maven-plugin.version>
+        <maven-compiler-plugin.version>3.13.0</maven-compiler-plugin.version>
         <maven-release-plugin.version>2.5.3</maven-release-plugin.version>
         <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
         <maven-javadoc-plugin.version>3.4.1</maven-javadoc-plugin.version>
-        <maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
-        <nexus-staging-maven-plugin.version>1.6.8</nexus-staging-maven-plugin.version>
+        <maven-gpg-plugin.version>3.2.4</maven-gpg-plugin.version>
     </properties>
 
     <dependencies>
@@ -153,44 +154,44 @@
 <!--                <artifactId>ones-common-task</artifactId>-->
 <!--                <version>${project.version}</version>-->
 <!--            </dependency>-->
-            <dependency>
-                <groupId>${project.groupId}</groupId>
-                <artifactId>ones-common-web</artifactId>
-                <version>${project.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>${project.groupId}</groupId>-->
+<!--                <artifactId>ones-common-web</artifactId>-->
+<!--                <version>${project.version}</version>-->
+<!--            </dependency>-->
             <!--os-kit-oss-->
             <!--os-kit-extra-->
-            <dependency>
-                <groupId>${project.groupId}</groupId>
-                <artifactId>ones-kit-extra</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>${project.groupId}</groupId>
-                <artifactId>ones-kit-oss</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>${project.groupId}</groupId>
-                <artifactId>ones-kit-redis</artifactId>
-                <version>${project.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>${project.groupId}</groupId>-->
+<!--                <artifactId>ones-kit-extra</artifactId>-->
+<!--                <version>${project.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>${project.groupId}</groupId>-->
+<!--                <artifactId>ones-kit-oss</artifactId>-->
+<!--                <version>${project.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>${project.groupId}</groupId>-->
+<!--                <artifactId>ones-kit-redis</artifactId>-->
+<!--                <version>${project.version}</version>-->
+<!--            </dependency>-->
             <!--os-mqtt-->
-            <dependency>
-                <groupId>${project.groupId}</groupId>
-                <artifactId>ones-mqtt-common</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>${project.groupId}</groupId>
-                <artifactId>ones-mqtt-server</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>${project.groupId}</groupId>
-                <artifactId>ones-mqtt-client</artifactId>
-                <version>${project.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>${project.groupId}</groupId>-->
+<!--                <artifactId>ones-mqtt-common</artifactId>-->
+<!--                <version>${project.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>${project.groupId}</groupId>-->
+<!--                <artifactId>ones-mqtt-server</artifactId>-->
+<!--                <version>${project.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>${project.groupId}</groupId>-->
+<!--                <artifactId>ones-mqtt-client</artifactId>-->
+<!--                <version>${project.version}</version>-->
+<!--            </dependency>-->
             <!--os-wx-->
 <!--            <dependency>-->
 <!--                <groupId>${project.groupId}</groupId>-->
@@ -344,23 +345,11 @@
         <module>ones-common</module>
 <!--        <module>os-ali</module>-->
 <!--        <module>os-starter</module>-->
-        <module>ones-kit</module>
-        <module>ones-mqtt</module>
+<!--        <module>ones-kit</module>-->
+<!--        <module>ones-mqtt</module>-->
 <!--        <module>os-wx</module>-->
     </modules>
 
-    <distributionManagement>
-        <snapshotRepository>
-            <!--oss需要对应到settings.xml下的service的id-->
-            <id>oss</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-        </snapshotRepository>
-        <repository>
-            <id>oss</id>
-            <name>releases</name>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-        </repository>
-    </distributionManagement>
     <build>
         <finalName>${project.name}</finalName>
         <pluginManagement>
@@ -392,85 +381,82 @@
                     <skip>true</skip>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-release-plugin</artifactId>
-                <version>${maven-release-plugin.version}</version>
-                <configuration>
-                    <tagNameFormat>v@{project.version}</tagNameFormat>
-                    <autoVersionSubmodules>true</autoVersionSubmodules>
-                </configuration>
-            </plugin>
-            <!--生产源码文件插件-->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-source-plugin</artifactId>
-                <version>${maven-source-plugin.version}</version>
-                <configuration>
-                    <attach>true</attach>
-                </configuration>
-                <executions>
-                    <execution>
-                        <phase>compile</phase>
-                        <goals>
-                            <goal>jar</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <!--生产javadoc插件-->
-            <!--增加Xdoclint:none忽略javadoc报错-->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>${maven-javadoc-plugin.version}</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>jar</goal>
-                        </goals>
-                        <configuration>
-                            <additionalJOption>-Xdoclint:none</additionalJOption>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <!--gpg加密插件-->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-gpg-plugin</artifactId>
-                <version>${maven-gpg-plugin.version}</version>
-                <executions>
-                    <execution>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>sign</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <!--自动发布：自动执行close->release->drop三步曲-->
-            <plugin>
-                <groupId>org.sonatype.plugins</groupId>
-                <artifactId>nexus-staging-maven-plugin</artifactId>
-                <version>${nexus-staging-maven-plugin.version}</version>
-                <extensions>true</extensions>
-                <configuration>
-                    <serverId>oss</serverId>
-                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
-                </configuration>
-                <dependencies>
-                    <dependency>
-                        <groupId>com.thoughtworks.xstream</groupId>
-                        <artifactId>xstream</artifactId>
-                        <version>1.4.15</version> <!-- apparently this needs to be exactly this version -->
-                    </dependency>
-                </dependencies>
-            </plugin>
         </plugins>
     </build>
+    <profiles>
+        <profile>
+            <id>release</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-release-plugin</artifactId>
+                        <version>${maven-release-plugin.version}</version>
+                        <configuration>
+                            <tagNameFormat>v@{project.version}</tagNameFormat>
+                            <autoVersionSubmodules>true</autoVersionSubmodules>
+                        </configuration>
+                    </plugin>
+                    <!--   central发布插件    -->
+                    <plugin>
+                        <groupId>org.sonatype.central</groupId>
+                        <artifactId>central-publishing-maven-plugin</artifactId>
+                        <version>0.5.0</version>
+                        <extensions>true</extensions>
+                        <configuration>
+                            <publishingServerId>central</publishingServerId>
+                            <!--                    <autoPublish>true</autoPublish>-->
+                        </configuration>
+                    </plugin>
+                    <!--生产源码文件插件-->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+                        <version>${maven-source-plugin.version}</version>
+                        <configuration>
+                            <attach>true</attach>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <phase>compile</phase>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <!--生产javadoc插件-->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                        <version>${maven-javadoc-plugin.version}</version>
+                        <executions>
+                            <execution>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <!--gpg加密插件-->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>${maven-gpg-plugin.version}</version>
+                        <executions>
+                            <execution>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
     <repositories>
         <!--阿里云代理-->
        <repository>

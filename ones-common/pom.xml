@@ -3,15 +3,14 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
+        <groupId>io.gitee.clarkstore</groupId>
         <artifactId>ones</artifactId>
-        <groupId>com.github.clarkstore</groupId>
-        <version>${revision}</version>
+        <version>0.0.2</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>ones-common</artifactId>
     <packaging>pom</packaging>
-
     <description>公共模块</description>
 
     <modules>
