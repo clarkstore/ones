@@ -154,44 +154,43 @@
 <!--                <artifactId>ones-common-task</artifactId>-->
 <!--                <version>${project.version}</version>-->
 <!--            </dependency>-->
-<!--            <dependency>-->
-<!--                <groupId>${project.groupId}</groupId>-->
-<!--                <artifactId>ones-common-web</artifactId>-->
-<!--                <version>${project.version}</version>-->
-<!--            </dependency>-->
-            <!--os-kit-oss-->
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>ones-common-web</artifactId>
+                <version>${project.version}</version>
+            </dependency>
             <!--os-kit-extra-->
-<!--            <dependency>-->
-<!--                <groupId>${project.groupId}</groupId>-->
-<!--                <artifactId>ones-kit-extra</artifactId>-->
-<!--                <version>${project.version}</version>-->
-<!--            </dependency>-->
-<!--            <dependency>-->
-<!--                <groupId>${project.groupId}</groupId>-->
-<!--                <artifactId>ones-kit-oss</artifactId>-->
-<!--                <version>${project.version}</version>-->
-<!--            </dependency>-->
-<!--            <dependency>-->
-<!--                <groupId>${project.groupId}</groupId>-->
-<!--                <artifactId>ones-kit-redis</artifactId>-->
-<!--                <version>${project.version}</version>-->
-<!--            </dependency>-->
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>ones-kit-extra</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>ones-kit-oss</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>ones-kit-redis</artifactId>
+                <version>${project.version}</version>
+            </dependency>
             <!--os-mqtt-->
-<!--            <dependency>-->
-<!--                <groupId>${project.groupId}</groupId>-->
-<!--                <artifactId>ones-mqtt-common</artifactId>-->
-<!--                <version>${project.version}</version>-->
-<!--            </dependency>-->
-<!--            <dependency>-->
-<!--                <groupId>${project.groupId}</groupId>-->
-<!--                <artifactId>ones-mqtt-server</artifactId>-->
-<!--                <version>${project.version}</version>-->
-<!--            </dependency>-->
-<!--            <dependency>-->
-<!--                <groupId>${project.groupId}</groupId>-->
-<!--                <artifactId>ones-mqtt-client</artifactId>-->
-<!--                <version>${project.version}</version>-->
-<!--            </dependency>-->
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>ones-mqtt-common</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>ones-mqtt-server</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>ones-mqtt-client</artifactId>
+                <version>${project.version}</version>
+            </dependency>
             <!--os-wx-->
 <!--            <dependency>-->
 <!--                <groupId>${project.groupId}</groupId>-->
@@ -213,7 +212,6 @@
                 <!-- 注意这里是import -->
                 <scope>import</scope>
             </dependency>
-            <!--oss-->
             <!--oss-->
             <dependency>
                 <groupId>io.minio</groupId>
@@ -346,7 +344,7 @@
 <!--        <module>os-ali</module>-->
 <!--        <module>os-starter</module>-->
         <module>ones-kit</module>
-<!--        <module>ones-mqtt</module>-->
+        <module>ones-mqtt</module>
 <!--        <module>os-wx</module>-->
     </modules>
 
