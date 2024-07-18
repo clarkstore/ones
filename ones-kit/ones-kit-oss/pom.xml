@@ -4,13 +4,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.github.clarkstore</groupId>
-        <artifactId>ones-kit</artifactId>
-        <version>${revision}</version>
+        <groupId>io.gitee.clarkstore</groupId>
+        <artifactId>ones</artifactId>
+        <version>0.0.2</version>
     </parent>
 
     <artifactId>ones-kit-oss</artifactId>
-    <packaging>jar</packaging>
 
     <description>OSS模块</description>
 

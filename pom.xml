@@ -345,7 +345,7 @@
         <module>ones-common</module>
 <!--        <module>os-ali</module>-->
 <!--        <module>os-starter</module>-->
-<!--        <module>ones-kit</module>-->
+        <module>ones-kit</module>
 <!--        <module>ones-mqtt</module>-->
 <!--        <module>os-wx</module>-->
     </modules>
