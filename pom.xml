@@ -403,7 +403,7 @@
                         <extensions>true</extensions>
                         <configuration>
                             <publishingServerId>central</publishingServerId>
-                            <!--                    <autoPublish>true</autoPublish>-->
+                            <autoPublish>true</autoPublish>
                         </configuration>
                     </plugin>
                     <!--生产源码文件插件-->
