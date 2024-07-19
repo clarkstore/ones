@@ -6,11 +6,10 @@
     <parent>
         <groupId>io.gitee.clarkstore</groupId>
         <artifactId>ones-mqtt</artifactId>
-        <version>0.0.2</version>
+        <version>0.0.3</version>
     </parent>
 
     <artifactId>ones-mqtt-client</artifactId>
-    <packaging>jar</packaging>
     <description>mq客户端模块</description>
 
     <dependencies>

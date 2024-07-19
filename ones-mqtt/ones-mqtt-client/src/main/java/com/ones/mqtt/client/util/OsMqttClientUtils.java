@@ -1,11 +1,10 @@
 package com.ones.mqtt.client.util;
 
 import com.ones.mqtt.common.model.OsMqttMsgDto;
-import jakarta.annotation.Resource;
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 import net.dreamlu.iot.mqtt.spring.client.MqttClientTemplate;
-import org.springframework.stereotype.Component;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.nio.charset.StandardCharsets;
 
@@ -17,7 +16,7 @@ import java.nio.charset.StandardCharsets;
 @Slf4j
 public class OsMqttClientUtils {
 	@Getter
-	@Resource
+	@Autowired
 	private MqttClientTemplate client;
 
 	/**

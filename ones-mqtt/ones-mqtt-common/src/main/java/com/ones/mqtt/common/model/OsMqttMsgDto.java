@@ -25,7 +25,7 @@ public class OsMqttMsgDto implements Serializable {
     /**
      * QoS
      */
-    private MqttQoS qoS = MqttQoS.QOS2;
+    private MqttQoS qoS = MqttQoS.QOS0;
     /**
      * 消息体
      */

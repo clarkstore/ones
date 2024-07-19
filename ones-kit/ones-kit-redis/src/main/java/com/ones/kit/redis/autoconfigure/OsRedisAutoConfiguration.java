@@ -3,6 +3,7 @@ package com.ones.kit.redis.autoconfigure;
 import com.ones.kit.redis.util.OsRedisUtils;
 import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.DependsOn;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
@@ -13,9 +14,10 @@ import org.springframework.data.redis.serializer.RedisSerializer;
  * Token配置
  *
  * @author Clark
- * @version 2022-05-26
+ * @version 2024-07-19
  */
 @AutoConfiguration
+@ConditionalOnProperty(value = "spring.data.redis.host")
 public class OsRedisAutoConfiguration {
 
     /**
