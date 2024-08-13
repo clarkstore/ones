@@ -13,8 +13,12 @@ import org.springframework.context.annotation.Bean;
  * @version 2024-07-18
  */
 @AutoConfiguration
-@ConditionalOnProperty(value = "mqtt.client.clientId")
+@ConditionalOnProperty(value = "mqtt.client.ip")
 public class OsMqttClientAutoConfiguration {
+    /**
+     * 装配
+     * @return
+     */
     @Bean
     @ConditionalOnMissingBean
     public OsMqttClientUtils osMqttClientUtils() {
